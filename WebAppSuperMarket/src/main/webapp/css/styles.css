@@ -1,0 +1,307 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	display: flex;
+	background-color: #ECF0F1;
+}
+
+.sidebar {
+	width: 220px;
+	height: 100vh;
+	background-color: #2C3E50;
+	color: #ECF0F1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.sidebar-header {
+	padding: 15px;
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: 700;
+	border-bottom: 1px solid #34495E;
+}
+
+.sidebar-menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 10px;
+}
+
+.sidebar-menu li {
+	width: 100%;
+}
+
+.sidebar-menu li a {
+	display: flex;
+	align-items: center;
+	padding: 12px 15px;
+	color: #ECF0F1;
+	text-decoration: none;
+	font-size: 1em;
+	transition: background-color 0.3s;
+}
+
+.sidebar-menu li a:hover {
+	background-color: #34495E;
+}
+
+.sidebar-menu li a i {
+	margin-right: 10px;
+}
+
+.main-content {
+	margin-left: 220px;
+	padding: 20px;
+	width: calc(100% - 220px);
+	height: 100vh;
+	overflow-y: auto;
+	background-color: #ECF0F1;
+}
+
+.content-section {
+	margin-bottom: 20px;
+}
+
+.content-section h2 {
+	margin-bottom: 15px;
+	font-weight: 500;
+	color: #2C3E50;
+}
+
+.form-section {
+	margin-bottom: 20px;
+}
+
+.table-section table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+.table-section table, th, td {
+	border: 1px solid #2C3E50;
+}
+
+th, td {
+	padding: 10px;
+	text-align: left;
+}
+
+th {
+	background-color: #34495E;
+	color: #ECF0F1;
+}
+
+.show-customers-button {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.show-customers-button a {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #007bff;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+.show-customers-button a:hover {
+	background-color: #0056b3;
+}
+
+.welcome-section {
+	text-align: center;
+}
+
+.welcome-section h1 {
+	font-size: 2.5em;
+	color: #006400;
+}
+
+.welcome-section p {
+	font-size: 1.2em;
+	color: #007bff;
+	margin: 20px 0;
+}
+
+.image-gallery {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.image-gallery img {
+	width: 300px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.marquee {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+
+.marquee-text {
+	display: inline-block;
+	padding-left: 100%;
+	animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee { 0% {
+	transform: translate(0, 0);
+}
+
+100%{
+transform:translate(-100% ,0);}
+}
+.s2submit-btn {
+	background-color: #007bff; /* Button background color */
+	color: #fff; /* Button text color */
+	padding: 10px 20px; /* Button padding */
+	border: none; /* Remove button border */
+	border-radius: 5px; /* Button border radius */
+	cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.s2submit-btn:hover {
+	background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* Invoice Billing Section Styles 20*/
+#invoice-billing {
+	padding: 80px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	margin: 20px 0;
+}
+
+#invoice-billing h2 {
+	margin-bottom: 20px;
+}
+
+.invoice-form label {
+	display: block;
+	margin: 10px 0 5px;
+}
+
+.invoice-form input, .invoice-form select {
+	width: 30%;
+	padding: 8px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.add-product-button {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #ffffff;
+	background-color: #28a745;
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.3s, transform 0.3s;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.add-product-button:hover {
+	background-color: #218838;
+	transform: translateY(-2px);
+}
+
+.add-product-button:active {
+	background-color: #1e7e34;
+	transform: translateY(0);
+}
+
+.invoice-table {
+	width: 100%;
+	margin-top: 20px;
+	border-collapse: collapse;
+}
+
+.invoice-table th, .invoice-table td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+.invoice-table th {
+	background-color: #06af97;
+}
+
+.remove-button {
+	color: #ff0000;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.remove-button:hover {
+	color: #cc0000;
+}
+
+.total-amount {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.print-bill-button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.print-bill-button:hover {
+	background-color: #45a049; /* Darker Green */
+}
+
+.print-bill-button:active {
+	background-color: #3e8e41; /* Active Green */
+}
+
+/* Additional CSS for the toggle button */
+.toggle-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+}
+

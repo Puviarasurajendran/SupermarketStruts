@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+
+	<constant name="struts.mapper.class"
+		value="com.crm.action.CustomActionMapper" />
+
+	<package name="market" namespace="/pages"
+		extends="struts-default">
+		<action name="Customers" class="com.crm.action.SMRouteAction">
+			<result name="success">/pages/customers.jsp</result>
+		</action>
+
+		<action name="Products" class="com.crm.action.SMRouteAction">
+			<result name="success">/pages/products.jsp</result>
+		</action>
+
+		<action name="Vendors" class="com.crm.action.SMRouteAction">
+			<result name="success">/pages/vendor.jsp</result>
+		</action>
+	</package>
+
+	<package name="apiaction1" namespace="/api/*"
+		extends="json-default">
+
+		<action name="Customers" class="com.crm.action.SMRouteAction">
+			<result type="json" />
+
+		</action>
+
+		<action name="Products" class="com.crm.action.SMRouteAction">
+			<result type="json" />
+		</action>
+
+		<action name="SalesOrders" class="com.crm.action.SMRouteAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="apiaction2" namespace="/demo"
+		extends="json-default">
+
+		<action name="Zoho" class="com.crm.action.SMRouteAction">
+			<result type="json" />
+		</action>
+
+	</package>
+
+</struts>
